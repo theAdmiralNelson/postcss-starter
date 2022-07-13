@@ -8,7 +8,7 @@ The main issue with grabbing multiple files with postcss is this error:
 These 2 flags don't allow for renaming the file with a `.css` extension
 
 Glob for all .scss files that don't start with undersore
-`"post": "NODE*ENV=development postcss \*\*/[!*]\*.scss --dir output",`
+`"post": "NODE*ENV=development postcss /**/[!_]\*.scss --dir output",`
 
 # Caveats
 
