@@ -1,0 +1,63 @@
+$nav-bg-color: #FFFFFF;
+
+.main-nav {
+	font-family: $main-font;
+}
+
+body.offscreen-nav-visible {
+	position: relative;
+	&::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: #000000;
+		opacity: .6;
+		z-index: 1999;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+}
+
+.offscreen-nav {
+	width: 100%;
+	max-width: 375px;
+	height: 100%;
+	background-color: $nav-bg-color;
+	padding: 30px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	transform: translateX(100%);
+	transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+	z-index: 2000;
+	visibility: hidden;
+	&.visible {
+		visibility: visible;
+		transform: translateX(0);
+		transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+	}
+	a {
+		color: var(--dark-gray);
+		&:hover {
+			color: var(--brand-accent);
+		}
+		&:focus {
+			border: solid 2px red;
+			outline: solid 2px red;
+		}
+	}
+	.has-dropdown {
+		background-color: #CCCCCC;
+		display: block;
+	}
+	.top-level > .has-children {
+		overflow: hidden;
+		> .dropdown {
+			// transform: translateY(-100%);
+		}
+	}
+}

@@ -1,0 +1,78 @@
+@use "sass:math";
+/*------------------------------------*\
+    @group Animated Hamburger icon
+\*------------------------------------*/
+
+$hamburger-color: $brand;
+$hamburger-height: 24px;
+
+.hamburger {
+	width: 20px;
+	height: $hamburger-height;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	transition: background 0.3s;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	overflow: hidden;
+	&:focus {
+		outline: none;
+	}
+	span {
+		height: 3px;
+		background: $hamburger-color;
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+		transition: background 0s 0.3s;
+		&::before,
+		&::after {
+			content: '';
+			background-color: $hamburger-color;
+			width: 100%;
+			height: 3px;
+			display: block;
+			position: absolute;
+			left: 0;
+			transition-duration: 0.3s, 0.3s;
+			transition-delay: 0.3s, 0s;
+		}
+		&::before {
+			top: -#{math.div($hamburger-height, 4)};
+			transition-property: top, transform;
+		}
+		&::after {
+			bottom: -#{math.div($hamburger-height, 4)};
+			transition-property: bottom, transform;
+		}
+	}
+
+}
+
+//Active state, add .active with JS
+.hamburger.active,
+.hamburger.active {
+	span {
+		background: none;
+		&::before {
+			top: 0;
+			transform: rotate(45deg);
+		}
+		&::after {
+			bottom: 0;
+			transform: rotate(-45deg);
+		}
+		&::before,
+		&::after {
+			background-color: $hamburger-color;
+			transition-delay: 0s, 0.3s;
+		}
+	}
+
+}
+
+/* @end Animated Hamburger icon */

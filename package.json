@@ -1,0 +1,72 @@
+{
+  "name": "shopify-storefront-reference-with-eleventy",
+  "version": "0.1.0",
+  "description": "A reference site for exploring the Shopify storefront API with Eleventy ",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/philhawksworth/shopify-11ty"
+  },
+  "scripts": {
+    "build": "cross-env ELEVENTY_ENV=production npm-run-all build:js build:sass build:eleventy",
+    "build:eleventy": "eleventy --quiet=false",
+    "build:js": "cross-env NODE_ENV=production node ./esbuild.config.mjs",
+    "build:sass": "sass --load-path=node_modules --no-source-map src/scss:dist/css",
+    "serve": "eleventy --serve",
+    "start": "npm run dev",
+    "dev": "ntl dev",
+    "watch:eleventy": "npx @11ty/eleventy --serve",
+    "watch:js": "cross-env NODE_ENV=dev node ./esbuild.config.mjs",
+    "watch:sass": "gulp watch",
+    "watch": "cross-env ELEVENTY_ENV=development npm-run-all --parallel watch:* --silent",
+    "updatebrowserlist": "npx browserslist@latest --update-db",
+    "post": " NODE_ENV=development postcss src/scss/main.scss --output output.css"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "> 0.5%",
+    "not dead",
+    "not IE 11",
+    "not op_mini all"
+  ],
+  "keywords": [
+    "eleventy",
+    "11ty",
+    "ssg",
+    "serverless",
+    "netlify"
+  ],
+  "author": "Phil Hawksworth <phil@netlify.com>",
+  "license": "ISC",
+  "dependencies": {
+    "@11ty/eleventy": "^1.0.0",
+    "@11ty/eleventy-fetch": "^3.0.0",
+    "@alpinejs/collapse": "^3.10.2",
+    "@alpinejs/focus": "^3.10.2",
+    "@alpinejs/persist": "^3.9.6",
+    "alpinejs": "^3.9.6",
+    "browserslist-to-esbuild": "^1.1.1",
+    "cross-env": "^7.0.3",
+    "dotenv": "^10.0.0",
+    "eleventy-sass": "^1.2.0",
+    "esbuild": "^0.14.27",
+    "gulp-sourcemaps": "^3.0.0",
+    "netlify-cli": "^8.15.3",
+    "node-fetch": "^2.6.1",
+    "npm-run-all": "^4.1.5",
+    "sass": "^1.29.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.5",
+    "cssnano": "^5.1.7",
+    "esbuild-sass-plugin": "^2.2.6",
+    "gulp": "^4.0.2",
+    "gulp-dependents": "^1.2.5",
+    "gulp-sass": "^5.1.0",
+    "postcss": "^8.4.12",
+    "postcss-advanced-variables": "^3.0.1",
+    "postcss-cli": "^9.1.0",
+    "postcss-map-get": "^0.3.0",
+    "postcss-nested": "^5.0.6",
+    "postcss-scss": "^4.0.4"
+  }
+}
