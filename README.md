@@ -59,7 +59,7 @@ However, this breaks someplace, and this media query won't be found in the resul
 
 A better way to do it is using map-get like this:
 
-````
+```
 $breakpoint: (
   'small': 36rem,
   'medium': 50rem,
