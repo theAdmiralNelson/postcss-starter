@@ -2,16 +2,16 @@ $main-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $alt-font: 'MetaPro', 'Lucida Grande', sans-serif;
 $heading-font: $alt-font;
 
-//Font weights
+/* Font weights */
 $main-normal: 400;
 $main-bold: 800;
 
-// Breakpoints
+/* Font weights */
 $bp-narrow: "(min-width: 500px)";
 $bp-mid: "(min-width: 800px)";
 $bp-wide: "(min-width: 1266px)";
 
-// Colours
+/* Font weights */
 
 $primary-text-color: #222;
 $secondary-text-color: #555555;
@@ -20,11 +20,11 @@ $accent-color: #d7176a;
 $accent-color-alternate: #00d9ff;
 
 $brand: #0C6D97;
-// --brand: #{$brand}
 
 :root {
 	--main-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	--brand: #{$brand};
+	--brand-accent: #8054B9;
+	--brand: $brand;
 	--brand-accent: #8054B9;
 	--dark-gray: #212121;
 }

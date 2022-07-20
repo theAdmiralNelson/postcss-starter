@@ -1,5 +1,5 @@
 $nav-bg-color: #FFFFFF;
-
+/* RIGHT HERE IS THE EVALUATED VAR: */ 
 .main-nav {
 	font-family: $main-font;
 }
@@ -53,11 +53,5 @@ body.offscreen-nav-visible {
 	.has-dropdown {
 		background-color: #CCCCCC;
 		display: block;
-	}
-	.top-level > .has-children {
-		overflow: hidden;
-		> .dropdown {
-			// transform: translateY(-100%);
-		}
 	}
 }

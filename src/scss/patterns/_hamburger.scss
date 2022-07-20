@@ -1,7 +1,7 @@
 @use "sass:math";
-/*------------------------------------*\
+/*------------------------------------
     @group Animated Hamburger icon
-\*------------------------------------*/
+------------------------------------*/
 
 $hamburger-color: $brand;
 $hamburger-height: 24px;
@@ -42,18 +42,16 @@ $hamburger-height: 24px;
 			transition-delay: 0.3s, 0s;
 		}
 		&::before {
-			top: -#{math.div($hamburger-height, 4)};
+			top: math.div($hamburger-height, 4);
 			transition-property: top, transform;
 		}
 		&::after {
-			bottom: -#{math.div($hamburger-height, 4)};
+			bottom: math.div($hamburger-height, 4);
 			transition-property: bottom, transform;
 		}
 	}
 
 }
-
-//Active state, add .active with JS
 .hamburger.active,
 .hamburger.active {
 	span {

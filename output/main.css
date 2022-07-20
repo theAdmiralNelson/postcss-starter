@@ -1,0 +1,400 @@
+*,
+:after,
+:before {
+  box-sizing: border-box;
+  margin: 0;
+}
+body,
+html {
+  font-family: Nanum Gothic, Montserrat, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+body {
+  border: 5px solid #ccc;
+  min-height: 100vh;
+  line-height: 1.4;
+}
+h1,
+h2,
+h3 {
+  font-family: Domine, "PT Serif", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Helvetica Neue, Arial, sans-serif;
+  font-weight: 400;
+}
+h1 {
+  font-size: 2.5rem;
+}
+p {
+  margin: 20px 0;
+}
+a,
+a:active,
+a:visited {
+  color: #d96528;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+input[type="radio"] + label {
+  font-size: 14px;
+}
+
+input[type="radio"] + label,
+button {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 10px 14px;
+  cursor: pointer;
+  color: #000;
+  font-weight: 700;
+  font-family: Nanum Gothic, Montserrat, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  transition: color 0.3s ease;
+}
+
+input[type="radio"]:checked + label,
+button:hover {
+  background: #000;
+  border: 1px solid #000;
+  color: #fff;
+}
+
+button.added {
+  background-color: #d96628cd;
+}
+
+button:disabled {
+  background: rgba(0, 0, 0, 0.283);
+  border: 1px solid rgba(0, 0, 0, 0.283);
+  color: #000;
+}
+button.toggle-cart {
+  background-color: transparent;
+  border: none;
+}
+button.toggle-cart:hover {
+    border: 1px solid #000;
+    color: #000;
+  }
+button.removeFromCart {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  font-size: 12px;
+  font-weight: 400;
+}
+button.removeFromCart:hover {
+    color: rgba(0, 0, 0, 0.475);
+  }
+hr {
+  border-top: 1px solid #eee;
+  margin: 45px 0;
+}
+input {
+  font-family: Nanum Gothic, Montserrat, -apple-system, BlinkMacSystemFont,
+    Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+.app-header {
+  flex-direction: column;
+  padding: 40px 40px 0;
+}
+.app-header,
+.main-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-nav {
+  width: 80vw;
+  margin-top: 30px;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  padding: 8px 0;
+}
+.main-nav ul {
+  padding-left: 0;
+}
+/* Base styles and utilities*/
+/*Font weights*/
+/* Breakpoints*/
+/* Colours*/
+/* --brand: #{$brand}*/
+:root {
+	--main-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--brand: #0C6D97;
+	--brand-accent: #8054B9;
+	--dark-gray: #212121;
+}
+/*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in iOS.
+ */
+html {
+  line-height: 1.15; /* 1 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers.
+ */
+body {
+  margin: 0;
+}
+/**
+ * Render the `main` element consistently in IE.
+ */
+main {
+  display: block;
+}
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box; /* 1 */
+  height: 0; /* 1 */
+  overflow: visible; /* 2 */
+}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Remove the gray background on active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * 1. Remove the bottom border in Chrome 57-
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none; /* 1 */
+  text-decoration: underline; /* 2 */
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted; /* 2 */
+}
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder;
+}
+b .test-1, strong .test-1 {
+    color: red;
+  }
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace; /* 1 */
+  font-size: 1em; /* 2 */
+}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sub {
+  bottom: -0.25em;
+}
+sup {
+  top: -0.5em;
+}
+.test-2 {
+  width: 100%;
+}
+@media (min-width: 50rem) {
+.test-2 {
+    width: 40em
+}
+  }
+.foo {
+  /* make red */
+  color: red;
+}
+.bar {
+  font-size: 1.5rem;
+}
+/* Font weights */
+/* Font weights */
+/* Font weights */
+:root {
+	--main-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--brand-accent: #8054B9;
+	--brand: #0C6D97;
+	--brand-accent: #8054B9;
+	--dark-gray: #212121;
+}
+/* RIGHT HERE IS THE EVALUATED VAR: */
+.main-nav {
+	font-family: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+body.offscreen-nav-visible {
+	position: relative;
+}
+body.offscreen-nav-visible::before {
+		content: '';
+		width: 100%;
+		height: 100%;
+		background: #000000;
+		opacity: .6;
+		z-index: 1999;
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+	}
+.offscreen-nav {
+	width: 100%;
+	max-width: 375px;
+	height: 100%;
+	background-color: #FFFFFF;
+	padding: 30px;
+	position: fixed;
+	top: 0;
+	right: 0;
+	transform: translateX(100%);
+	transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+	z-index: 2000;
+	visibility: hidden;
+}
+.offscreen-nav.visible {
+		visibility: visible;
+		transform: translateX(0);
+		transition: transform .3s ease-in-out, visibility .3s ease-in-out;
+	}
+.offscreen-nav a {
+		color: var(--dark-gray);
+	}
+.offscreen-nav a:hover {
+			color: var(--brand-accent);
+		}
+.offscreen-nav a:focus {
+			border: solid 2px red;
+			outline: solid 2px red;
+		}
+.offscreen-nav .has-dropdown {
+		background-color: #CCCCCC;
+		display: block;
+	}
+@use "sass:math";
+/*------------------------------------
+    @group Animated Hamburger icon
+------------------------------------*/
+.hamburger {
+	width: 20px;
+	height: 24px;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	transition: background 0.3s;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+}
+.hamburger:focus {
+		outline: none;
+	}
+.hamburger span {
+		height: 3px;
+		background: #0C6D97;
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+		transition: background 0s 0.3s;
+	}
+.hamburger span::before,
+		.hamburger span::after {
+			content: '';
+			background-color: #0C6D97;
+			width: 100%;
+			height: 3px;
+			display: block;
+			position: absolute;
+			left: 0;
+			transition-duration: 0.3s, 0.3s;
+			transition-delay: 0.3s, 0s;
+		}
+.hamburger span::before {
+			top: math.div(24px, 4);
+			transition-property: top, transform;
+		}
+.hamburger span::after {
+			bottom: math.div(24px, 4);
+			transition-property: bottom, transform;
+		}
+.hamburger.active span, .hamburger.active span {
+		background: none;
+	}
+.hamburger.active span::before, .hamburger.active span::before {
+			top: 0;
+			transform: rotate(45deg);
+		}
+.hamburger.active span::after, .hamburger.active span::after {
+			bottom: 0;
+			transform: rotate(-45deg);
+		}
+.hamburger.active span::before,
+		.hamburger.active span::after,
+		.hamburger.active span::before,
+		.hamburger.active span::after {
+			background-color: #0C6D97;
+			transition-delay: 0s, 0.3s;
+		}
+/* @end Animated Hamburger icon */
+/*# sourceMappingURL=main.css.map */

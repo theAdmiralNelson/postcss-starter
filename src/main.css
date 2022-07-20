@@ -1,3 +1,5 @@
-div {
-    background-color: antiquewhite;
-}
+@import 'scss/base/basestyles';
+@import 'scss/main';
+@import 'scss/util/variables';
+@import 'scss/modules/main_nav.scss';
+@import 'scss/patterns/_hamburger.scss'

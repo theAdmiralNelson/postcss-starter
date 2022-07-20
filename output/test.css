@@ -1,0 +1,83 @@
+/* Font weights */
+
+/* Font weights */
+
+/* Font weights */
+
+:root {
+	--main-font: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	--brand-accent: #8054B9;
+	--brand: #0C6D97;
+	--brand-accent: #8054B9;
+	--dark-gray: #212121;
+}
+@use "sass:math";
+/*------------------------------------
+    @group Animated Hamburger icon
+------------------------------------*/
+.hamburger {
+	width: 20px;
+	height: 24px;
+	font-size: 0;
+	margin: 0;
+	padding: 0;
+	transition: background 0.3s;
+	cursor: pointer;
+	display: block;
+	position: relative;
+	overflow: hidden;
+
+}
+.hamburger:focus {
+		outline: none;
+	}
+.hamburger span {
+		height: 3px;
+		background: #0C6D97;
+		display: block;
+		position: absolute;
+		top: 10px;
+		left: 0;
+		right: 0;
+		transition: background 0s 0.3s;
+	}
+.hamburger span::before,
+		.hamburger span::after {
+			content: '';
+			background-color: #0C6D97;
+			width: 100%;
+			height: 3px;
+			display: block;
+			position: absolute;
+			left: 0;
+			transition-duration: 0.3s, 0.3s;
+			transition-delay: 0.3s, 0s;
+		}
+.hamburger span::before {
+			top: math.div(24px, 4);
+			transition-property: top, transform;
+		}
+.hamburger span::after {
+			bottom: math.div(24px, 4);
+			transition-property: bottom, transform;
+		}
+.hamburger.active span, .hamburger.active span {
+		background: none;
+	}
+.hamburger.active span::before, .hamburger.active span::before {
+			top: 0;
+			transform: rotate(45deg);
+		}
+.hamburger.active span::after, .hamburger.active span::after {
+			bottom: 0;
+			transform: rotate(-45deg);
+		}
+.hamburger.active span::before,
+		.hamburger.active span::after,
+		.hamburger.active span::before,
+		.hamburger.active span::after {
+			background-color: #0C6D97;
+			transition-delay: 0s, 0.3s;
+		}
+/* @end Animated Hamburger icon */
+/*# sourceMappingURL=test.css.map */

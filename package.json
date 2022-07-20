@@ -19,7 +19,7 @@
     "watch:sass": "gulp watch",
     "watch": "cross-env ELEVENTY_ENV=development npm-run-all --parallel watch:* --silent",
     "updatebrowserlist": "npx browserslist@latest --update-db",
-    "post": " NODE_ENV=development postcss src/scss/main.scss --output output.css"
+    "post": "NODE_ENV=development postcss ./src/*.css --base --dir output"
   },
   "browserslist": [
     "last 2 versions",
@@ -65,6 +65,7 @@
     "postcss": "^8.4.12",
     "postcss-advanced-variables": "^3.0.1",
     "postcss-cli": "^9.1.0",
+    "postcss-functions": "^4.0.2",
     "postcss-map-get": "^0.3.0",
     "postcss-nested": "^5.0.6",
     "postcss-scss": "^4.0.4"
